@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Define a codificação de caracteres da página -->
+    <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar corretamente a celulares e tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Descrição da página para mecanismos de busca -->
+    <meta
+        name="description"
+        content="Portfólio de Marco Antônio e Samuel, estudantes de Análise e Desenvolvimento de Sistemas."
+    >
+
+    <title>Marco Antônio & Samuel | Portfólio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuração personalizada do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#06b6d4",
+                        secondary: "#8b5cf6"
+                    }
+                }
+            }
+        };
+    </script>
+
+    <!-- Arquivo CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-slate-950 text-white">
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
+
+    <header
+        id="header"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+    >
+
+        <nav
+            class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between"
+            aria-label="Navegação principal"
+        >
+
+            <!-- Logo -->
+            <a
+                href="#inicio"
+                class="text-2xl font-black tracking-wider"
+                aria-label="Ir para o início"
+            >
+                M<span class="text-cyan-400">&</span>S
+            </a>
+
+            <!-- Menu para computadores -->
+            <ul class="hidden md:flex items-center gap-8">
+
+                <li>
+                    <a
+                        href="#inicio"
+                        class="nav-link"
+                    >
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#sobre"
+                        class="nav-link"
+                    >
+                        Sobre
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#habilidades"
+                        class="nav-link"
+                    >
+                        Habilidades
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#projetos"
+                        class="nav-link"
+                    >
+                        Projetos
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#contato"
+                        class="nav-link"
+                    >
+                        Contato
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Botão do menu mobile -->
+            <button
+                id="menuButton"
+                type="button"
+                class="md:hidden text-2xl"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </nav>
+
+
+        <!-- Menu mobile -->
+        <div
+            id="mobileMenu"
+            class="hidden md:hidden border-t border-slate-800 bg-slate-950"
+        >
+
+            <ul class="px-6 py-4 space-y-4">
+
+                <li>
+                    <a href="#inicio" class="mobile-link">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#sobre" class="mobile-link">
+                        Sobre
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#habilidades" class="mobile-link">
+                        Habilidades
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projetos" class="mobile-link">
+                        Projetos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contato" class="mobile-link">
+                        Contato
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO / APRESENTAÇÃO
+             ================================================= -->
+
+        <section
+            id="inicio"
+            class="min-h-screen flex items-center relative overflow-hidden pt-24"
+        >
+
+            <!-- Elementos decorativos do fundo -->
+            <div class="background-circle circle-one"></div>
+            <div class="background-circle circle-two"></div>
+
+            <div
+                class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-16 items-center"
+            >
+
+                <!-- Texto principal -->
+                <div class="hero-content">
+
+                    <p
+                        class="text-cyan-400 font-semibold tracking-widest uppercase mb-4"
+                    >
+                        Portfólio acadêmico
+                    </p>
+
+                    <h1
+                        class="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight"
+                    >
+                        Marco Antônio
+                        <span class="gradient-text">&</span>
+                        Samuel
+                    </h1>
+
+                    <p
+                        class="mt-6 text-xl text-slate-300 max-w-xl leading-relaxed"
+                    >
+                        Estudantes de Análise e Desenvolvimento de Sistemas
+                        apaixonados por tecnologia, programação e criação de
+                        soluções digitais.
+                    </p>
+
+
+                    <!-- Botões principais -->
+                    <div class="flex flex-wrap gap-4 mt-8">
+
+                        <a
+                            href="#projetos"
+                            class="btn-primary"
+                        >
+                            Ver projetos
+                        </a>
+
+                        <a
+                            href="#contato"
+                            class="btn-secondary"
+                        >
+                            Entre em contato
+                        </a>
+
+                    </div>
+
+
+                    <!-- Indicadores -->
+                    <div class="flex gap-10 mt-12">
+
+                        <div>
+                            <strong class="text-3xl font-bold">
+                                03+
+                            </strong>
+
+                            <p class="text-slate-400 text-sm">
+                                Projetos
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong class="text-3xl font-bold">
+                                04+
+                            </strong>
+
+                            <p class="text-slate-400 text-sm">
+                                Tecnologias
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong class="text-3xl font-bold">
+                                100%
+                            </strong>
+
+                            <p class="text-slate-400 text-sm">
+                                Dedicação
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Elemento visual -->
+                <div class="flex justify-center">
+
+                    <div class="profile-card">
+
+                        <!-- Efeito de brilho -->
+                        <div class="profile-glow"></div>
+
+                        <!-- Conteúdo do card -->
+                        <div class="profile-inner">
+
+                            <span class="text-cyan-400 text-sm">
+                                &lt;developers&gt;
+                            </span>
+
+                            <div class="text-7xl font-black my-6">
+                                M<span class="text-cyan-400">&</span>S
+                            </div>
+
+                            <p class="text-slate-400">
+                                Criando. Aprendendo.
+                                Desenvolvendo.
+                            </p>
+
+                            <span class="text-cyan-400 text-sm block mt-6">
+                                &lt;/developers&gt;
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SOBRE
+             ================================================= -->
+
+        <section
+            id="sobre"
+            class="py-28 px-6 bg-slate-900/50"
+        >
+
+            <div class="max-w-7xl mx-auto">
+
+                <!-- Título -->
+                <div class="section-title">
+
+                    <span>01 — Sobre nós</span>
+
+                    <h2>
+                        Quem somos
+                    </h2>
+
+                    <p>
+                        Conheça um pouco da nossa trajetória na tecnologia.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="grid lg:grid-cols-2 gap-12 items-center"
+                >
+
+                    <div>
+
+                        <h3 class="text-3xl font-bold mb-6">
+                            Transformando aprendizado em projetos
+                        </h3>
+
+                        <p class="text-slate-400 leading-relaxed mb-5">
+                            Somos estudantes de Análise e Desenvolvimento
+                            de Sistemas e estamos construindo nossa jornada
+                            profissional através de projetos acadêmicos
+                            e experiências práticas.
+                        </p>
+
+                        <p class="text-slate-400 leading-relaxed">
+                            Nosso objetivo é desenvolver aplicações úteis,
+                            aprender novas tecnologias e transformar ideias
+                            em soluções digitais.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Cards informativos -->
+                    <div class="grid sm:grid-cols-2 gap-5">
+
+                        <article class="info-card">
+
+                            <span class="text-3xl">
+                                💡
+                            </span>
+
+                            <h3 class="font-bold text-xl mt-4">
+                                Criatividade
+                            </h3>
+
+                            <p class="text-slate-400 mt-2">
+                                Buscamos soluções diferentes para problemas
+                                reais.
+                            </p>
+
+                        </article>
+
+
+                        <article class="info-card">
+
+                            <span class="text-3xl">
+                                🚀
+                            </span>
+
+                            <h3 class="font-bold text-xl mt-4">
+                                Evolução
+                            </h3>
+
+                            <p class="text-slate-400 mt-2">
+                                Estamos sempre aprendendo novas tecnologias.
+                            </p>
+
+                        </article>
+
+
+                        <article class="info-card">
+
+                            <span class="text-3xl">
+                                💻
+                            </span>
+
+                            <h3 class="font-bold text-xl mt-4">
+                                Tecnologia
+                            </h3>
+
+                            <p class="text-slate-400 mt-2">
+                                Desenvolvimento web e programação fazem
+                                parte da nossa formação.
+                            </p>
+
+                        </article>
+
+
+                        <article class="info-card">
+
+                            <span class="text-3xl">
+                                🤝
+                            </span>
+
+                            <h3 class="font-bold text-xl mt-4">
+                                Colaboração
+                            </h3>
+
+                            <p class="text-slate-400 mt-2">
+                                Trabalhamos juntos para transformar ideias
+                                em projetos.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             HABILIDADES
+             ================================================= -->
+
+        <section
+            id="habilidades"
+            class="py-28 px-6"
+        >
+
+            <div class="max-w-7xl mx-auto">
+
+                <div class="section-title">
+
+                    <span>02 — Habilidades</span>
+
+                    <h2>
+                        Tecnologias
+                    </h2>
+
+                    <p>
+                        Algumas das tecnologias que fazem parte da nossa
+                        formação.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+                >
+
+                    <!-- HTML -->
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            &lt;/&gt;
+                        </div>
+
+                        <h3>
+                            HTML5
+                        </h3>
+
+                        <p>
+                            Estruturação semântica de páginas web.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Tailwind -->
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            ◆
+                        </div>
+
+                        <h3>
+                            Tailwind CSS
+                        </h3>
+
+                        <p>
+                            Criação de interfaces modernas e responsivas.
+                        </p>
+
+                    </article>
+
+
+                    <!-- JavaScript -->
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            JS
+                        </div>
+
+                        <h3>
+                            JavaScript
+                        </h3>
+
+                        <p>
+                            Interatividade e manipulação do DOM.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Java -->
+                    <article class="skill-card">
+
+                        <div class="skill-icon">
+                            ☕
+                        </div>
+
+                        <h3>
+                            Java
+                        </h3>
+
+                        <p>
+                            Programação orientada a objetos.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROJETOS
+             ================================================= -->
+
+        <section
+            id="projetos"
+            class="py-28 px-6 bg-slate-900/50"
+        >
+
+            <div class="max-w-6xl mx-auto">
+
+                <div class="section-title">
+
+                    <span>03 — Projetos</span>
+
+                    <h2>
+                        Nosso trabalho
+                    </h2>
+
+                    <p>
+                        Alguns projetos desenvolvidos durante nossa formação.
+                    </p>
+
+                </div>
+
+
+                <!-- Carousel -->
+                <div class="relative">
+
+                    <!-- Área que esconde os slides que estão fora da tela -->
+                    <div class="overflow-hidden rounded-3xl">
+
+                        <!-- Elementos do carousel -->
+                        <div
+                            id="carouselTrack"
+                            class="flex transition-transform duration-500 ease-in-out"
+                        >
+
+
+                            <!-- Projeto 1 -->
+                            <article class="project-slide">
+
+                                <div class="project-image">
+                                    <span>01</span>
+                                    <strong>
+                                        SISTEMA
+                                    </strong>
+                                </div>
+
+                                <div class="p-8 lg:p-12">
+
+                                    <span class="project-number">
+                                        PROJETO 01
+                                    </span>
+
+                                    <h3>
+                                        Sistema de Gestão
+                                    </h3>
+
+                                    <p>
+                                        Sistema desenvolvido para
+                                        gerenciamento de informações,
+                                        usuários e processos.
+                                    </p>
+
+                                    <div class="flex flex-wrap gap-2 my-6">
+
+                                        <span class="tech-tag">
+                                            HTML
+                                        </span>
+
+                                        <span class="tech-tag">
+                                            CSS
+                                        </span>
+
+                                        <span class="tech-tag">
+                                            JavaScript
+                                        </span>
+
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="btn-primary"
+                                        onclick="abrirModal(0)"
+                                    >
+                                        Ver detalhes
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- Projeto 2 -->
+                            <article class="project-slide">
+
+                                <div class="project-image">
+                                    <span>02</span>
+                                    <strong>
+                                        MOBILE
+                                    </strong>
+                                </div>
+
+                                <div class="p-8 lg:p-12">
+
+                                    <span class="project-number">
+                                        PROJETO 02
+                                    </span>
+
+                                    <h3>
+                                        Aplicativo Mobile
+                                    </h3>
+
+                                    <p>
+                                        Aplicação mobile criada para
+                                        facilitar tarefas e oferecer uma
+                                        experiência simples ao usuário.
+                                    </p>
+
+                                    <div class="flex flex-wrap gap-2 my-6">
+
+                                        <span class="tech-tag">
+                                            React Native
+                                        </span>
+
+                                        <span class="tech-tag">
+                                            JavaScript
+                                        </span>
+
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="btn-primary"
+                                        onclick="abrirModal(1)"
+                                    >
+                                        Ver detalhes
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- Projeto 3 -->
+                            <article class="project-slide">
+
+                                <div class="project-image">
+                                    <span>03</span>
+                                    <strong>
+                                        API
+                                    </strong>
+                                </div>
+
+                                <div class="p-8 lg:p-12">
+
+                                    <span class="project-number">
+                                        PROJETO 03
+                                    </span>
+
+                                    <h3>
+                                        API REST
+                                    </h3>
+
+                                    <p>
+                                        API para gerenciamento e consulta
+                                        de informações através de
+                                        requisições HTTP.
+                                    </p>
+
+                                    <div class="flex flex-wrap gap-2 my-6">
+
+                                        <span class="tech-tag">
+                                            Python
+                                        </span>
+
+                                        <span class="tech-tag">
+                                            Django
+                                        </span>
+
+                                        <span class="tech-tag">
+                                            PostgreSQL
+                                        </span>
+
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="btn-primary"
+                                        onclick="abrirModal(2)"
+                                    >
+                                        Ver detalhes
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Botão anterior -->
+                    <button
+                        id="prevButton"
+                        type="button"
+                        class="carousel-button left-2 lg:-left-16"
+                        aria-label="Projeto anterior"
+                    >
+                        ←
+                    </button>
+
+
+                    <!-- Botão próximo -->
+                    <button
+                        id="nextButton"
+                        type="button"
+                        class="carousel-button right-2 lg:-right-16"
+                        aria-label="Próximo projeto"
+                    >
+                        →
+                    </button>
+
+                </div>
+
+
+                <!-- Indicadores do carousel -->
+                <div
+                    id="carouselIndicators"
+                    class="flex justify-center gap-2 mt-8"
+                >
+
+                    <button
+                        class="indicator active"
+                        aria-label="Ir para projeto 1"
+                    ></button>
+
+                    <button
+                        class="indicator"
+                        aria-label="Ir para projeto 2"
+                    ></button>
+
+                    <button
+                        class="indicator"
+                        aria-label="Ir para projeto 3"
+                    ></button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTATO
+             ================================================= -->
+
+        <section
+            id="contato"
+            class="py-28 px-6"
+        >
+
+            <div class="max-w-5xl mx-auto">
+
+                <div class="section-title">
+
+                    <span>04 — Contato</span>
+
+                    <h2>
+                        Vamos conversar?
+                    </h2>
+
+                    <p>
+                        Envie uma mensagem através do formulário.
+                    </p>
+
+                </div>
+
+
+                <div class="grid lg:grid-cols-5 gap-10">
+
+
+                    <!-- Informações -->
+                    <div class="lg:col-span-2">
+
+                        <h3 class="text-2xl font-bold mb-5">
+                            Entre em contato
+                        </h3>
+
+                        <p class="text-slate-400 leading-relaxed mb-8">
+                            Tem alguma dúvida, projeto ou oportunidade?
+                            Preencha o formulário e envie sua mensagem.
+                        </p>
+
+
+                        <div class="space-y-5">
+
+                            <div class="contact-info">
+                                <span>📧</span>
+
+                                <div>
+                                    <p class="text-sm text-slate-500">
+                                        E-mail
+                                    </p>
+
+                                    <p>
+                                        contato@portfolio.com
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="contact-info">
+                                <span>📍</span>
+
+                                <div>
+                                    <p class="text-sm text-slate-500">
+                                        Localização
+                                    </p>
+
+                                    <p>
+                                        Brasil
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="contact-info">
+                                <span>💻</span>
+
+                                <div>
+                                    <p class="text-sm text-slate-500">
+                                        Área
+                                    </p>
+
+                                    <p>
+                                        Desenvolvimento de Software
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Formulário -->
+                    <form
+                        id="contactForm"
+                        class="lg:col-span-3 form-card"
+                        novalidate
+                    >
+
+                        <!-- Campo nome -->
+                        <div class="form-group">
+
+                            <label for="nome">
+                                Nome
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                placeholder="Digite seu nome"
+                            >
+
+                            <span
+                                id="nomeErro"
+                                class="error-message"
+                            ></span>
+
+                        </div>
+
+
+                        <!-- Campo email -->
+                        <div class="form-group">
+
+                            <label for="email">
+                                E-mail
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="seuemail@exemplo.com"
+                            >
+
+                            <span
+                                id="emailErro"
+                                class="error-message"
+                            ></span>
+
+                        </div>
+
+
+                        <!-- Campo mensagem -->
+                        <div class="form-group">
+
+                            <label for="mensagem">
+                                Mensagem
+                            </label>
+
+                            <textarea
+                                id="mensagem"
+                                name="mensagem"
+                                rows="5"
+                                placeholder="Digite sua mensagem..."
+                            ></textarea>
+
+                            <span
+                                id="mensagemErro"
+                                class="error-message"
+                            ></span>
+
+                        </div>
+
+
+                        <!-- Botão de envio -->
+                        <button
+                            type="submit"
+                            class="btn-primary w-full"
+                        >
+                            Enviar mensagem
+                        </button>
+
+
+                        <!-- Mensagem de sucesso -->
+                        <p
+                            id="sucesso"
+                            class="success-message"
+                        ></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         MODAL DOS PROJETOS
+         ===================================================== -->
+
+    <div
+        id="modal"
+        class="hidden fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm
+               items-center justify-center px-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitulo"
+    >
+
+        <div
+            id="modalContent"
+            class="modal-content"
+        >
+
+            <!-- Botão fechar -->
+            <button
+                id="closeModal"
+                type="button"
+                class="modal-close"
+                aria-label="Fechar janela"
+            >
+                ×
+            </button>
+
+            <span
+                id="modalProjeto"
+                class="project-number"
+            ></span>
+
+            <h2
+                id="modalTitulo"
+                class="text-3xl font-bold mt-3 mb-5"
+            ></h2>
+
+            <p
+                id="modalDescricao"
+                class="text-slate-400 leading-relaxed"
+            ></p>
+
+            <div
+                id="modalTecnologias"
+                class="flex flex-wrap gap-2 mt-6"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         RODAPÉ
+         ===================================================== -->
+
+    <footer
+        class="border-t border-slate-800 py-8 px-6"
+    >
+
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row
+                   justify-between items-center gap-4"
+        >
+
+            <p class="text-slate-500">
+                © 2026 Marco Antônio & Samuel
+            </p>
+
+            <p class="text-slate-500">
+                Desenvolvido com HTML, Tailwind CSS e JavaScript.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Arquivo JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

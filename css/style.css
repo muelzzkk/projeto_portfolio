@@ -1,0 +1,650 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+   ===================================================== */
+
+/* Remove comportamentos diferentes entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define o comportamento de rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Define uma fonte padrão para toda a página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Define o espaço necessário para as seções
+   quando a navegação utiliza o menu fixo */
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =====================================================
+   CABEÇALHO
+   ===================================================== */
+
+/* Classe adicionada pelo JavaScript quando o usuário
+   começa a rolar a página */
+.header-scrolled {
+    background-color: rgba(2, 6, 23, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Links do menu */
+.nav-link {
+    position: relative;
+    color: #cbd5e1;
+    transition: color 0.3s ease;
+}
+
+/* Altera a cor quando o mouse passa sobre o link */
+.nav-link:hover {
+    color: #22d3ee;
+}
+
+
+/* Cria uma linha abaixo do link */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background-color: #22d3ee;
+    transition: width 0.3s ease;
+}
+
+/* Faz a linha aparecer no hover */
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+/* Links do menu mobile */
+.mobile-link {
+    display: block;
+    color: #cbd5e1;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.mobile-link:hover {
+    color: #22d3ee;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+/* Texto com gradiente */
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        #22d3ee,
+        #8b5cf6
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* Círculos decorativos do fundo */
+.background-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+
+/* Primeiro círculo */
+.circle-one {
+    width: 350px;
+    height: 350px;
+    background-color: #06b6d4;
+    top: 10%;
+    right: -100px;
+}
+
+
+/* Segundo círculo */
+.circle-two {
+    width: 300px;
+    height: 300px;
+    background-color: #8b5cf6;
+    bottom: -100px;
+    left: -100px;
+}
+
+
+/* Card principal da apresentação */
+.profile-card {
+    width: 340px;
+    height: 340px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Brilho atrás do card */
+.profile-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    background: linear-gradient(
+        135deg,
+        #06b6d4,
+        #8b5cf6
+    );
+    filter: blur(30px);
+    opacity: 0.4;
+}
+
+
+/* Parte interna do card */
+.profile-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    border-radius: 30px;
+    background: rgba(15, 23, 42, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* =====================================================
+   TÍTULOS DAS SEÇÕES
+   ===================================================== */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+/* Pequeno texto acima do título */
+.section-title span {
+    color: #22d3ee;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+
+/* Título principal */
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+
+/* Descrição */
+.section-title p {
+    color: #94a3b8;
+    margin-top: 12px;
+}
+
+
+/* =====================================================
+   BOTÕES
+   ===================================================== */
+
+/* Botão principal */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background-color: #06b6d4;
+    color: #020617;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+
+/* Efeito ao passar o mouse */
+.btn-primary:hover {
+    background-color: #22d3ee;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2);
+}
+
+
+/* Botão secundário */
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+
+.btn-secondary:hover {
+    border-color: #22d3ee;
+    color: #22d3ee;
+}
+
+
+/* =====================================================
+   CARDS DE INFORMAÇÃO
+   ===================================================== */
+
+.info-card {
+    padding: 25px;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    background-color: rgba(15, 23, 42, 0.5);
+    transition: all 0.3s ease;
+}
+
+
+/* Efeito dos cards */
+.info-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(34, 211, 238, 0.4);
+    background-color: rgba(15, 23, 42, 0.9);
+}
+
+
+/* =====================================================
+   HABILIDADES
+   ===================================================== */
+
+.skill-card {
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid #1e293b;
+    background-color: #0f172a;
+    transition: all 0.3s ease;
+}
+
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: #06b6d4;
+}
+
+
+/* Ícone das habilidades */
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: rgba(6, 182, 212, 0.1);
+    color: #22d3ee;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+
+/* Título da habilidade */
+.skill-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+/* Descrição da habilidade */
+.skill-card p {
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   CAROUSEL
+   ===================================================== */
+
+/* Cada slide ocupa exatamente 100% do carousel */
+.project-slide {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #0f172a;
+}
+
+
+/* Área visual do projeto */
+.project-image {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(34, 211, 238, 0.2),
+            transparent 60%
+        ),
+        #020617;
+    border: 1px solid #1e293b;
+}
+
+
+/* Número do projeto */
+.project-image span {
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(34, 211, 238, 0.2);
+}
+
+
+/* Nome visual */
+.project-image strong {
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+    color: #22d3ee;
+}
+
+
+/* Identificação do projeto */
+.project-number {
+    color: #22d3ee;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+
+/* Título do projeto */
+.project-slide h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* Descrição */
+.project-slide p {
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+
+/* Tags de tecnologia */
+.tech-tag {
+    padding: 6px 12px;
+    border-radius: 999px;
+    background-color: #1e293b;
+    color: #67e8f9;
+    font-size: 0.8rem;
+}
+
+
+/* Botões laterais do carousel */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #06b6d4;
+    color: #020617;
+    font-size: 1.5rem;
+    font-weight: 800;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+
+.carousel-button:hover {
+    background-color: #22d3ee;
+    transform: translateY(-50%) scale(1.1);
+}
+
+
+/* Indicadores */
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #475569;
+    transition: all 0.3s ease;
+}
+
+
+/* Indicador ativo */
+.indicator.active {
+    width: 25px;
+    border-radius: 999px;
+    background-color: #22d3ee;
+}
+
+
+/* =====================================================
+   CONTATO
+   ===================================================== */
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #e2e8f0;
+}
+
+
+/* Formulário */
+.form-card {
+    padding: 35px;
+    border: 1px solid #1e293b;
+    border-radius: 20px;
+    background-color: #0f172a;
+}
+
+
+/* Grupo do formulário */
+.form-group {
+    margin-bottom: 22px;
+}
+
+
+/* Labels */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #e2e8f0;
+    font-weight: 600;
+}
+
+
+/* Campos */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    background-color: #020617;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+
+/* Campo selecionado */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #22d3ee;
+}
+
+
+/* Mensagem de erro */
+.error-message {
+    display: block;
+    min-height: 20px;
+    margin-top: 5px;
+    color: #f87171;
+    font-size: 0.85rem;
+}
+
+
+/* Mensagem de sucesso */
+.success-message {
+    color: #4ade80;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   MODAL
+   ===================================================== */
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border: 1px solid #334155;
+    border-radius: 20px;
+    background-color: #0f172a;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    animation: modalEntrada 0.3s ease;
+}
+
+
+/* Botão fechar */
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #94a3b8;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+
+.modal-close:hover {
+    color: white;
+}
+
+
+/* Animação de abertura do modal */
+@keyframes modalEntrada {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   ANIMAÇÃO DE ENTRADA
+   ===================================================== */
+
+.hero-content {
+    animation: aparecer 0.8s ease-out;
+}
+
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+   ===================================================== */
+
+/* Ajustes para tablets e celulares */
+@media (max-width: 768px) {
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .profile-card {
+        width: 280px;
+        height: 280px;
+    }
+
+    .project-slide {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        min-height: 250px;
+    }
+
+    .project-slide h3 {
+        font-size: 1.8rem;
+    }
+
+    .form-card {
+        padding: 25px;
+    }
+
+}
+
+
+/* Ajustes para celulares pequenos */
+@media (max-width: 480px) {
+
+    .profile-card {
+        width: 240px;
+        height: 240px;
+    }
+
+    .project-image span {
+        font-size: 4rem;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+}
